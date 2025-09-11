@@ -1,0 +1,20 @@
+{
+  "summary_info": {
+    "organization_id": "your-org-id-here",
+    "api_calls_used": 5,
+    "timestamp": 1757602425,
+    "discovery_time": "2025-09-11 16:53:45"
+  },
+  "infrastructure": {
+    "sites": 4,
+    "total_devices": 9,
+    "switches": 7,
+    "access_points": 2,
+    "gateways": 0
+  },
+  "connectivity": {
+    "total_connections": 29,
+    "unique_links": 2,
+    "devices_with_connections": 2
+  }
+}

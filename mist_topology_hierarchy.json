@@ -1,0 +1,726 @@
+{
+  "organization": {
+    "organization_id": "your-org-id-here",
+    "discovery_info": {
+      "timestamp": 1757602425,
+      "discovery_time": "2025-09-11 16:53:45",
+      "api_calls_used": 5
+    },
+    "sites": [
+      {
+        "site_id": "cc8095cf-0a36-4785-be11-9365807ea995",
+        "site_name": "Unknown",
+        "device_count": 4,
+        "device_types": {
+          "switches": [
+            {
+              "name": "EX4000_2",
+              "mac": "6c78c1d07c00",
+              "model": "EX4000-24P",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "GY2025AV0173",
+              "connections": []
+            },
+            {
+              "name": "EX4000_1",
+              "mac": "6c78c1d09a00",
+              "model": "EX4000-24P",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "GY1925AV0551",
+              "connections": []
+            },
+            {
+              "name": "EX4650_1",
+              "mac": "34936fe4b800",
+              "model": "EX4650-48Y",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "XH4925131385",
+              "connections": []
+            },
+            {
+              "name": "EX4650_2",
+              "mac": "34936feb0200",
+              "model": "EX4650-48Y",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "XH4925131253",
+              "connections": []
+            }
+          ],
+          "access_points": [],
+          "gateways": [],
+          "other": []
+        },
+        "connections": {
+          "internal_links": [],
+          "external_links": [],
+          "unconnected_devices": [
+            {
+              "name": "EX4000_2",
+              "mac": "6c78c1d07c00",
+              "type": "switch"
+            },
+            {
+              "name": "EX4000_1",
+              "mac": "6c78c1d09a00",
+              "type": "switch"
+            },
+            {
+              "name": "EX4650_1",
+              "mac": "34936fe4b800",
+              "type": "switch"
+            },
+            {
+              "name": "EX4650_2",
+              "mac": "34936feb0200",
+              "type": "switch"
+            }
+          ]
+        }
+      },
+      {
+        "site_id": "your-site-id-here",
+        "site_name": "Unknown",
+        "device_count": 3,
+        "device_types": {
+          "switches": [
+            {
+              "name": "EX4100_1",
+              "mac": "3063ead46d80",
+              "model": "EX4100-24P",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "FC3524AX0177",
+              "connections": []
+            },
+            {
+              "name": "EX4100_2",
+              "mac": "3063ead49b80",
+              "model": "EX4100-24P",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "FC3524AX0269",
+              "connections": []
+            }
+          ],
+          "access_points": [
+            {
+              "name": "AP64_Outdoor",
+              "mac": "5433c60e6ccb",
+              "model": "AP64",
+              "type": "ap",
+              "status": "connected",
+              "serial": "A20032409037D",
+              "connections": [
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "up",
+                  "protocol": "Unknown"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                }
+              ]
+            }
+          ],
+          "gateways": [],
+          "other": []
+        },
+        "connections": {
+          "internal_links": [],
+          "external_links": [
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "up",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP64_Outdoor",
+              "source_mac": "5433c60e6ccb",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            }
+          ],
+          "unconnected_devices": [
+            {
+              "name": "EX4100_1",
+              "mac": "3063ead46d80",
+              "type": "switch"
+            },
+            {
+              "name": "EX4100_2",
+              "mac": "3063ead49b80",
+              "type": "switch"
+            }
+          ]
+        }
+      },
+      {
+        "site_id": "1fd19b82-7b38-4c94-b723-f328347acbed",
+        "site_name": "Unknown",
+        "device_count": 1,
+        "device_types": {
+          "switches": [],
+          "access_points": [
+            {
+              "name": "AP Home",
+              "mac": "70904101fa68",
+              "model": "AP45",
+              "type": "ap",
+              "status": "disconnected",
+              "serial": "A162024020485",
+              "connections": [
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "up",
+                  "protocol": "Unknown"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "up",
+                  "protocol": "Unknown"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                },
+                {
+                  "local_port": "N/A",
+                  "neighbor_mac": "N/A",
+                  "neighbor_port": "N/A",
+                  "neighbor_system": "N/A",
+                  "status": "discovered",
+                  "protocol": "LLDP"
+                }
+              ]
+            }
+          ],
+          "gateways": [],
+          "other": []
+        },
+        "connections": {
+          "internal_links": [],
+          "external_links": [
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "up",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "up",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            },
+            {
+              "source_device": "AP Home",
+              "source_mac": "70904101fa68",
+              "source_port": "N/A",
+              "target_mac": "N/A",
+              "target_port": "N/A",
+              "status": "discovered",
+              "speed_mbps": "N/A",
+              "protocol": "LLDP"
+            }
+          ],
+          "unconnected_devices": []
+        }
+      },
+      {
+        "site_id": "25fc351d-e70c-450e-9600-b079a55cd398",
+        "site_name": "Unknown",
+        "device_count": 1,
+        "device_types": {
+          "switches": [
+            {
+              "name": "EX4100_Stack",
+              "mac": "0200036afb9c",
+              "model": "EX4100-24P",
+              "type": "switch",
+              "status": "unknown",
+              "serial": "0200036AFB9C",
+              "connections": []
+            }
+          ],
+          "access_points": [],
+          "gateways": [],
+          "other": []
+        },
+        "connections": {
+          "internal_links": [],
+          "external_links": [],
+          "unconnected_devices": [
+            {
+              "name": "EX4100_Stack",
+              "mac": "0200036afb9c",
+              "type": "switch"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

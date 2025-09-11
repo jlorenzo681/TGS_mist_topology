@@ -80,13 +80,16 @@ class MistBulkTopologyClient:
         # Step 2: Get sites list for site-level stats calls
         sites = self._get_sites_from_devices(all_devices)
         
-        # Step 3: Get detailed stats from each site (includes LLDP data)
+        # Step 3: Get site information (names, addresses, etc.)
+        sites_info = self._get_sites_info(sites)
+        
+        # Step 4: Get detailed stats from each site (includes LLDP data)
         all_stats = self._get_sites_stats(sites)
         
-        # Step 4: Build complete topology map locally
-        topology = self._build_topology_map(all_devices, all_stats)
+        # Step 5: Build complete topology map locally
+        topology = self._build_topology_map(all_devices, all_stats, sites_info)
         
-        # Optional Step 5: Get discovered switches (requires site iteration)
+        # Optional Step 6: Get discovered switches (requires site iteration)
         if self._needs_discovered_switches():
             topology['discovered_switches'] = self._get_discovered_switches_bulk(topology['sites'])
         
@@ -109,6 +112,40 @@ class MistBulkTopologyClient:
                 sites.add(site_id)
         return list(sites)
     
+    def _get_sites_info(self, site_ids: List[str]) -> Dict[str, Dict]:
+        """Get site information including names for the given site IDs"""
+        sites_info = {}
+        
+        # Get organization sites
+        url = f"{self.base_url}/orgs/{self.config.org_id}/sites"
+        print(f"API Call {self.api_call_count + 1}: Getting organization sites...")
+        org_sites = self._make_request(url)
+        
+        if org_sites:
+            for site in org_sites:
+                site_id = safe_get(site, 'id')
+                if site_id in site_ids:
+                    sites_info[site_id] = {
+                        'site_id': site_id,
+                        'site_name': safe_get(site, 'name', f'Site-{site_id[:8]}'),
+                        'address': safe_get(site, 'address', 'Unknown'),
+                        'timezone': safe_get(site, 'timezone', 'Unknown'),
+                        'country_code': safe_get(site, 'country_code', 'Unknown')
+                    }
+        
+        # Fill in any missing sites with default info
+        for site_id in site_ids:
+            if site_id not in sites_info:
+                sites_info[site_id] = {
+                    'site_id': site_id,
+                    'site_name': f'Site-{site_id[:8]}',
+                    'address': 'Unknown',
+                    'timezone': 'Unknown',
+                    'country_code': 'Unknown'
+                }
+        
+        return sites_info
+    
     def _get_sites_stats(self, sites: List[str]) -> List[Dict]:
         """Get device statistics from all sites (includes LLDP and port data)"""
         all_stats = []
@@ -120,7 +157,7 @@ class MistBulkTopologyClient:
                 all_stats.extend(site_stats)
         return all_stats
     
-    def _build_topology_map(self, devices: List[Dict], stats: List[Dict]) -> Dict:
+    def _build_topology_map(self, devices: List[Dict], stats: List[Dict], sites_info: Dict[str, Dict]) -> Dict:
         """
         Process bulk data locally to build complete topology map
         without additional API calls
@@ -149,9 +186,13 @@ class MistBulkTopologyClient:
             
             # Initialize site if not exists
             if site_id not in topology['sites']:
+                site_info = sites_info.get(site_id, {})
                 topology['sites'][site_id] = {
                     'site_id': site_id,
-                    'site_name': safe_get(device, 'site_name', 'Unknown'),
+                    'site_name': safe_get(site_info, 'site_name', f'Site-{site_id[:8]}'),
+                    'address': safe_get(site_info, 'address', 'Unknown'),
+                    'timezone': safe_get(site_info, 'timezone', 'Unknown'),
+                    'country_code': safe_get(site_info, 'country_code', 'Unknown'),
                     'devices': [],
                     'device_count': 0
                 }

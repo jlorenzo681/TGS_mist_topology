@@ -2,14 +2,14 @@
   "organization": {
     "organization_id": "your-org-id-here",
     "discovery_info": {
-      "timestamp": 1757602425,
-      "discovery_time": "2025-09-11 16:53:45",
-      "api_calls_used": 5
+      "timestamp": 1757603131,
+      "discovery_time": "2025-09-11 17:05:31",
+      "api_calls_used": 6
     },
     "sites": [
       {
         "site_id": "cc8095cf-0a36-4785-be11-9365807ea995",
-        "site_name": "Unknown",
+        "site_name": "Pe\u00f1uelas_Distribution",
         "device_count": 4,
         "device_types": {
           "switches": [
@@ -83,7 +83,7 @@
       },
       {
         "site_id": "your-site-id-here",
-        "site_name": "Unknown",
+        "site_name": "Pe\u00f1uelas_Principal",
         "device_count": 3,
         "device_types": {
           "switches": [
@@ -393,7 +393,7 @@
       },
       {
         "site_id": "1fd19b82-7b38-4c94-b723-f328347acbed",
-        "site_name": "Unknown",
+        "site_name": "Remote_office",
         "device_count": 1,
         "device_types": {
           "switches": [],
@@ -691,7 +691,7 @@
       },
       {
         "site_id": "25fc351d-e70c-450e-9600-b079a55cd398",
-        "site_name": "Unknown",
+        "site_name": "site_stack_2",
         "device_count": 1,
         "device_types": {
           "switches": [

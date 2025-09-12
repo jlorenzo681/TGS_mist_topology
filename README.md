@@ -10,6 +10,7 @@ Efficient bulk topology retrieval for Juniper Mist networks using REST API endpo
 - **CLI Interface**: Command-line tool with comprehensive options
 - **Connection Mapping**: Extracts LLDP and port connectivity information
 - **Site Analysis**: Detailed site and device distribution analysis
+- **Enhanced Site Information**: Retrieves site names, addresses, timezones, and country codes
 - **Error Handling**: Robust retry logic with exponential backoff
 
 ## Quick Start
@@ -79,6 +80,7 @@ python mist_topology_cli.py --search-devices --type switch
 This tool uses the most efficient Mist REST API endpoints:
 
 - `GET /api/v1/orgs/{org_id}/inventory` - Complete device inventory (single call)
+- `GET /api/v1/orgs/{org_id}/sites` - Organization sites with detailed information (names, addresses, timezones)
 - `GET /api/v1/orgs/{org_id}/stats/devices` - Organization-wide device statistics  
 - `GET /api/v1/orgs/{org_id}/devices/search` - Device search and filtering
 - `GET /api/v1/sites/{site_id}/discovered_switches` - Unmanaged switch discovery (optional)
@@ -101,7 +103,7 @@ from mist_topology_client import MistBulkTopologyClient, load_config_from_env
 config = load_config_from_env()
 client = MistBulkTopologyClient(config)
 
-# Get complete topology with 2 API calls
+# Get complete topology with site details (5-7 API calls)
 topology = client.get_complete_topology()
 
 # Display statistics
@@ -167,6 +169,15 @@ Creates two files:
 - `{filename}_devices.csv` - Device inventory with site, name, MAC, type, model, status
 - `{filename}_links.csv` - Network links with source/target information
 
+### Site Information
+The topology data now includes detailed site information for each location:
+- **Site Name**: Human-readable site names (e.g., "Peñuelas_Distribution")
+- **Physical Address**: Complete site addresses
+- **Timezone**: Site-specific timezone information
+- **Country Code**: Geographic location identifiers
+
+This enhanced data allows for better geographical analysis and site-based reporting.
+
 ## Efficiency Comparison
 
 **❌ Inefficient Approach (Avoid)**
@@ -177,15 +188,16 @@ Creates two files:
 
 **✅ Efficient Approach (This Tool)**
 - 1 API call for organization inventory
-- 1 API call for device statistics
-- **Total: 2 API calls**
+- 1 API call for organization sites (with detailed site information)
+- 1 API call for device statistics per site (typically 3-5 sites)
+- **Total: 5-7 API calls** (vs 1000+ traditional approach)
 
-This represents a **99.8% reduction** in API calls while retrieving the same information.
+This represents a **99.5% reduction** in API calls while retrieving comprehensive information including site details.
 
 ## Rate Limiting
 
 - Organization tokens: 5,000 calls/hour per token
-- With bulk endpoints: Complete topology in 2-3 calls
+- With bulk endpoints: Complete topology in 5-7 calls (including detailed site information)
 - Supports automatic retry with exponential backoff
 - Rate limit headers are monitored and respected
 

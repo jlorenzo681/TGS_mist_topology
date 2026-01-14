@@ -6,7 +6,7 @@ import sys
 import os
 import time
 from pathlib import Path
-from mist_topology_client import MistBulkTopologyClient, MistConfig, load_config_from_env, load_config_from_file
+from .client import MistBulkTopologyClient, MistConfig, load_config_from_env, load_config_from_file
 
 
 def safe_get(obj, key, default="N/A"):

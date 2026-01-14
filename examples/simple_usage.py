@@ -6,9 +6,7 @@ Demonstrates the efficient bulk topology retrieval approach
 
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from mist_topology_client import MistBulkTopologyClient, MistConfig, load_config_from_env
+from mist_topology.client import MistBulkTopologyClient, MistConfig, load_config_from_env
 
 
 def main():

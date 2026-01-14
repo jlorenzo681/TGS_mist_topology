@@ -18,7 +18,7 @@ Efficient bulk topology retrieval for Juniper Mist networks using REST API endpo
 ### 1. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ### 2. Configure Authentication
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 **Option A: .env File (Recommended)**
 ```bash
 # Create sample configuration
-python mist_topology_cli.py --create-config
+mist-topology --create-config
 
 # Copy template and edit with your credentials
 cp .env.template .env
@@ -60,19 +60,19 @@ export HOST="api.eu.mist.com"  # Use your regional endpoint
 
 ```bash
 # Get topology summary
-python mist_topology_cli.py --get-topology --summary
+mist-topology --get-topology --summary
 
 # Get detailed site information
-python mist_topology_cli.py --get-topology --site-details
+mist-topology --get-topology --site-details
 
 # Export to JSON
-python mist_topology_cli.py --get-topology --export json --output my_topology
+mist-topology --get-topology --export json --output my_topology
 
 # Export to CSV (creates device and link files)
-python mist_topology_cli.py --get-topology --export csv --output network_data
+mist-topology --get-topology --export csv --output network_data
 
 # Search for specific devices
-python mist_topology_cli.py --search-devices --type switch
+mist-topology --search-devices --type switch
 ```
 
 ## API Endpoints Used
@@ -97,7 +97,7 @@ Replace `api.mist.com` with your regional endpoint:
 ### Simple Example
 
 ```python
-from mist_topology_client import MistBulkTopologyClient, load_config_from_env
+from mist_topology import MistBulkTopologyClient, load_config_from_env
 
 # Load configuration from .env file automatically
 config = load_config_from_env()
@@ -129,34 +129,34 @@ See `examples/advanced_usage.py` for comprehensive topology analysis including:
 ### Topology Retrieval
 ```bash
 # Basic topology with summary
-python mist_topology_cli.py --get-topology --summary
+mist-topology --get-topology --summary
 
 # Detailed site information
-python mist_topology_cli.py --get-topology --site-details  
+mist-topology --get-topology --site-details  
 
 # Export formats
-python mist_topology_cli.py --get-topology --export json --output topology
-python mist_topology_cli.py --get-topology --export csv --output network
+mist-topology --get-topology --export json --output topology
+mist-topology --get-topology --export csv --output network
 ```
 
 ### Device Search
 ```bash
 # Search all devices
-python mist_topology_cli.py --search-devices
+mist-topology --search-devices
 
 # Search by device type
-python mist_topology_cli.py --search-devices --type switch
-python mist_topology_cli.py --search-devices --type ap
-python mist_topology_cli.py --search-devices --type gateway
+mist-topology --search-devices --type switch
+mist-topology --search-devices --type ap
+mist-topology --search-devices --type gateway
 ```
 
 ### Configuration Management
 ```bash
 # Create sample configuration file
-python mist_topology_cli.py --create-config
+mist-topology --create-config
 
 # Use specific config file
-python mist_topology_cli.py --config-file my_config.json --get-topology
+mist-topology --config-file my_config.json --get-topology
 ```
 
 ## Output Formats

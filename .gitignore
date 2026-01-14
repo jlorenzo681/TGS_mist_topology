@@ -66,4 +66,4 @@ switch_insights.json
 device_export.json
 
 # Misc
-.env
+.env*.token
